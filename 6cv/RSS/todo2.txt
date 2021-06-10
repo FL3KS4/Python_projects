@@ -1,0 +1,18 @@
+Navrhněte třídu/třídy pro RSS čtečku.
+
+1. Lze registrovat libovolný počet zdrojů. (0.46875 b)✅
+2. Čtečka bude získané zprávy ukládat do souboru v libovolné podobě (txt/xml). (0.46875 b)✅
+3. Čtečka po každém zapnutí načte historii zpráv ze souboru. (0.46875 b)✅
+4. Čtečka umožní výpis všech článků do konzole. (0.46875 b)✅
+5. Čtečka nabídne možnost výpisu všech článků pro konkrétní zdroj. (0.46875 b)✅
+6. Čtečka nabídne možnost vyhledávání článků podle názvu ve všech dostupných zprávách. (0.46875 b)✅
+7. Čtečka nabídne možnost vyhledávání článků podle názvu v konkrétním zdroji. (0.46875 b)✅
+8. Čtečka pozná, že je zapnuta v offline režimu, upozorní uživatele a nabídne možnost výpisu načtených zpráv
+ze souboru  (viz. bod 3.) (0.46875 b)✅
+
+3.75 bodů celkem, max součet (todo1+todo2) 5 bodů
+
+
+Zvolte vhodný, přehledný přístup (ideálně OOP). Pro odevzdání připravte libovolný přehledný testovací skript. Můžete
+využít pytest nebo jakýkoliv jiný vhodný přístup.
+Testovací skript/skripty si dopředu připravte tak, aby nic nebránilo rychlé kontrole.

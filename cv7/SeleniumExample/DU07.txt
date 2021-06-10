@@ -1,0 +1,53 @@
+
+Zadání 7. úkolu
+7.1 Optimalizační experiment - max 2.5 bodu
+Vytvoříte skript, jeho hlavním smyslem bude simulovat hledání prvočísel v rozsáhlých datech. Hlavním smyslem úlohy je optimalizace pomocí multithreadingu a multiprocesingu. Testovacími daty bude list čísel od 1 do X. Na každé číslo od 1 do X aplikujete tuto funkci:
+def is_prime(n):
+    if (n < 2) or (n % 2 == 0 and n > 2):
+        return (n, False)
+    elif n == 2:
+        return (n, True)
+    elif n == 3:
+        return (n, True)
+    else:
+        for i in range(3, math.ceil(math.sqrt(n)) + 1, 2):
+            if n % i == 0:
+                return (n, False)
+        return (n, True)
+Funkce určuje, zda je číslo prvočíslem.
+
+Hlavní skript bude mít následující strukturu:
+1.) Vytvoříte testovací data. Testovacími daty bude list čísel od 1 do X. Za X dosaďte vhodné číslo dle výkonu Vašeho stroje. Doporučuji začít kolem 4000000 a toto číslo upravit dle požadavků uvedených v dalších bodech.
+2.) Vytvořte skript pro sekvenční přístup, kdy standardním postupem projdete čísla od 1 do X a aplikujete na každé číslo zadanou funkci. Změříte čas celé akce v ms.
+
+3.) Vytvoříte skript ve kterém si vhodně rozdělíte data a použijete multithreading (import threading). Opět změříte čas celé akce v ms. Měřte skutečně celou akci, včetně rozdělení/přípravy dat. Jde nám o to, porovnat různé přístupy co nejvěrohodněji.
+
+4.) Vytvoříte skript, ve kterém si vhodně rozdělíte data a použijete multiprocesing (from multiprocessing import Process). Opět změříte čas celé akce v ms. Měřte skutečně celou akci, včetně rozdělení/přípravy dat. Jde nám o to, porovnat různé přístupy co nejvěrohodněji.
+
+Pozor! Výsledný skript bude plně nastavitelný na přehledém místě (velikost dat, počet vláken, počet procesů)
+
+5.) Výsledný skript zapíše do souboru v přehledné podobě časy řešení problému pro:
+a) standardní přístup
+b) využití vláken
+c) využití procesů
+
+6.) Experiment opakujte tak, aby jste našli:
+a) velikost testovacích dat pro váš konkrétní stroj, kdy postrádá smysl optimalizace
+b) velikost testovacích dat a počet použitých vláken/procesů pro váš konkrétní stroj, kdy se začne vyplácet optimalizace.
+c) velikost testovacích dat, kdy se výrazně vyplatí optimalizace
+
+7.) Vytvořte “protokol” do kterého zapíšete výsledky a jednoduše vysvětlíte zjištěné jevy.
+
+
+7.2 Selenium cookie clicker - max 2.5 bodu
+Vhodně navrhněte a implementujte robota, který bude pomocí “selenium” hrát hru cookie clicker.
+https://orteil.dashnet.org/cookieclicker/
+Za řešení úkolu se považuje vhodně navrhnutá architektura skriptu, která má nějakou vhodnout logiku a zajistí:
+1. Klikání na sušenku v rozumném intervalu.
+2. Nakupovaní upgradu ze “Store” (Reinforced index finger - odemkne se po 100 sušenkách)
+- V případě, že je k dispozici dostatek sušenek na nákup.
+3. Nakupování dalších nástrojů pro maximalizaci zisku sušenek (Cursor, Grandma, Farm...)
+V případě, že je k dispozici dostatek sušenek na nákup.
+Použijte vhodný přístup pro maximalizaci zisku, tj. zapřemýšlejte, např jeslti a jak kontrolovat kolik nástrojů je již koupeno.
+Na základě zjištění např. dodržujte poměr nákupů pro nástroje tak jak si určíte/nastavíte (1 Cursor, 1 Grandma, 1 Farm...) či jiný poměr.
+Pozor! Skript bez zmíněné logiky není uznatelné řešení (např. jen bezhlavé klikání v cyklu atd..)

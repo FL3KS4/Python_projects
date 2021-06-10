@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<playground>
+    <world sizeX="640" sizeY="480"/>
+    <atom type="Normal">
+        <color>#FF0000</color>
+        <position>150,100</position>
+        <radius>50</radius>
+        <velocity>6,10</velocity>
+    </atom>
+    <atom type="Normal">
+        <color>#1111aa</color>
+        <position>30,30</position>
+        <radius>30</radius>
+        <velocity>7,20</velocity>
+    </atom>
+</playground>

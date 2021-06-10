@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menza>
+	<datum den="Pondeli">
+		<jidlo nazev="Bramborove placky">
+			<ingredience nazev="brambory"/>
+			<ingredience nazev="mouka"/>
+			<ingredience nazev="vejce"/>
+		</jidlo>
+		<jidlo nazev="Placinky">
+			<ingredience nazev="mleho"/>
+			<ingredience nazev="mouka"/>
+			<ingredience nazev="vejce"/>
+		</jidlo>
+	</datum>
+	<datum den="Utery">
+		<jidlo nazev="Vepro, knedlo, zelo">
+			<ingredience nazev="veprove"/>
+			<ingredience nazev="kledliky bramborove"/>
+			<ingredience nazev="kysane zeli"/>
+		</jidlo>
+		<jidlo nazev="Bolonske spagety">
+			<ingredience nazev="spagety"/>
+			<ingredience nazev="Bolonska omacka"/>
+			<ingredience nazev="veprove"/>
+		</jidlo>
+	</datum>
+</menza>

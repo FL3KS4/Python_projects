@@ -1,0 +1,17 @@
+Client-Server chat
+
+Vytvořte client-server chat na bázi "xmlrpc".
+
+- Client bude vůči serveru vystupovat s konkrétní přezdívkou.
+1. Client nabízí dva typy zpráv k odeslání. Veřejnou a soukromou. (0.75 b)
+2. Client si dokáže načíst všechny veřejné zprávy a všechny soukromé zprávy, které byly odeslány
+na jeho přezdívku. (0.75 b)
+3. Client umožní uživateli smazat konkrétní zprávu, kterou sám odeslal. (0.75 b)
+4. Server si ukládá všechny zprávy do XML souboru. (0.75 b)
+5. Server si po zapnutí načte všechny uložené zprávy, pokud existují. (0.75 b)
+
+3.75 bodů celkem, max součet (todo1+todo2) 5 bodů
+
+Zvolte vhodný, přehledný přístup (ideálně OOP). Pro odevzdání připravte libovolný přehledný testovací skript. Můžete
+využít pytest nebo jakýkoliv jiný vhodný přístup.
+Testovací skript/skripty si dopředu připravte tak, aby nic nebránilo rychlé kontrole.

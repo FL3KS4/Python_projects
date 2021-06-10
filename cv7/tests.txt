@@ -1,0 +1,63 @@
+
+Jak je patrné z tabulky níže, řešení s Thready (jestli je dobře) je nejpomalejší a to natolik, že jsem ho už pro 1M čísel ani nepoužil,
+řešit úlohu sekvenčně je výhodné pod 1M čísel, poté je určitě lepší rychlejší použít MT, pro 10M čísel je to o asi 40%* rychlejší
+
+Řešení otázek: 	velikost testovacích dat pro váš konkrétní stroj, kdy postrádá smysl optimalizace ?  N < 1M
+
+		velikost testovacích dat a počet použitých vláken/procesů pro váš konkrétní stroj, kdy se začne vyplácet optimalizace ?
+		Testoval jsem pouze pro 4 procesy takže 4procesy & N > 1M
+
+		velikost testovacích dat, kdy se výrazně vyplatí optimalizace?
+		Řekl bych že od N > 4M se vyplatí MT
+
+*u 4-cores procesoru, parametr jde měnit
+**Parametry se mění uplně dole v ''ifu'', kde jsou funkce spuštěny kvůli freeze_supportu pro MT
+*** Test pro thready je defaultně zakomentován, pro spuštění stačí jednoduše odkomentovat
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|100 | Seq Test 		 | 0.0
+|100 | Thread Test 		 | 54.85367774963379
+|100 | MultiProces Test 	 | 168.5490608215332 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|1000 | Seq Test 		 | 0.9970664978027344
+|1000 | Thread Test 		 | 306.1807155609131
+|1000 | MultiProces Test 	 | 156.58116340637207 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|10000 | Seq Test 		 | 10.970830917358398
+|10000 | Thread Test 		 | 2884.9289417266846
+|10000 | MultiProces Test 	 | 157.55295753479004 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|100000 | Seq Test 		 | 207.3974609375
+|100000 | Thread Test 		 | 28770.200729370117
+|100000 | MultiProces Test 	 | 366.8546676635742 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|1000000 | Seq Test 		 | 4438.39955329895
+|1000000 | Thread Test 		 | 0
+|1000000 | MultiProces Test 	 | 3211.038112640381 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|4000000 | Seq Test 		 | 29234.51328277588
+|4000000 | Thread Test 		 | 0
+|4000000 | MultiProces Test 	 | 19554.842710494995 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|5000000 | Seq Test 		 | 40624.31073188782
+|5000000 | Thread Test 		 | 0
+|5000000 | MultiProces Test 	 | 28391.386032104492 | Processes: 4
+___________________________________________________
+___________________________________________________
+|Numbers 	 | Function 	 | Time(ms) 
+|10000000 | Seq Test 		 | 105241.28437042236
+|10000000 | Thread Test 	 | 0
+|10000000 | MultiProces Test 	 | 67875.93126296997 | Processes: 4
+___________________________________________________
